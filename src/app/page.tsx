@@ -3,6 +3,8 @@ import Header from "./_components/header";
 import { Button } from "./_components/ui/button";
 import { Input } from "./_components/ui/input";
 import Image from "next/image";
+import { Card, CardContent } from "./_components/ui/card";
+import { Badge } from "./_components/ui/badge";
 
 export default function Home() {
   return (
@@ -19,9 +21,17 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="relative h-[150px] w-full">
+        <div className="mt-6 relative h-[150px] w-full">
           <Image alt="Agende nas melhores" src="/banner-01.png" fill className="object-cover rounded-xl"/>
         </div>
+
+        <Card className="mt-6">
+          <CardContent className="flex">
+            <div className="flex flex-col gap-2 py-5">
+              <Badge>Confirmado</Badge>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
